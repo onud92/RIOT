@@ -155,7 +155,7 @@ extern "C" {
 # endif
 #endif /* TCP_LISTEN_BACKLOG */
 
-#define LWIP_SOCKET             0
+#define LWIP_SOCKET             1
 
 #define LWIP_DONT_PROVIDE_BYTEORDER_FUNCTIONS
 #define MEMP_MEM_MALLOC         1

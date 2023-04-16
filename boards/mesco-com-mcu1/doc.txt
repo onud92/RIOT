@@ -1,0 +1,5 @@
+/**
+ * @defgroup    boards_mesco-com-mcu1 MESCO_COM_MCU1
+ * @ingroup     boards
+ * @brief       Support for the MESCO_COM_MCU1 Board (based on a STM32F429II-H7) 
+ */

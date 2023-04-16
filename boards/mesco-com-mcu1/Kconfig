@@ -1,0 +1,32 @@
+# Copyright (c) 2022 MESCO Engineering GmbH
+#
+# This file is subject to the terms and conditions of the GNU Lesser
+# General Public License v2.1. See the file LICENSE in the top level
+# directory for more details.
+#
+
+config BOARD
+    default "mesco-com-mcu1" if BOARD_MESCO_COM_MCU1
+
+config BOARD_MESCO_COM_MCU1
+    bool
+    default y
+    select CPU_MODEL_STM32F429II
+
+    # Put defined MCU peripherals here (in alphabetical order)
+    select HAS_PERIPH_DMA
+    select HAS_PERIPH_ETH
+    select HAS_PERIPH_SPI
+    select HAS_PERIPH_UART
+    select HAS_PERIPH_TIMER
+
+    select BOARD_HAS_HSE
+    select BOARD_HAS_LSE
+
+    # Put other features for this board (in alphabetical order)
+    select HAS_RIOTBOOT
+
+config CLOCK_HSE
+    default 26000000    
+
+source "$(RIOTBOARD)/common/stm32/Kconfig"

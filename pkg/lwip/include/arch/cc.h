@@ -27,6 +27,7 @@
 #include "irq.h"
 #include "byteorder.h"
 #include "mutex.h"
+#include "random.h"
 
 #ifdef MODULE_LOG
 #include "log.h"
@@ -101,6 +102,13 @@ extern "C" {
 #  endif
 #endif
 /** @} */
+
+#ifdef MODULE_RANDOM
+/**
+ * @brief   Use `random_uint32()` to generate random numbers, if available
+ */
+#define LWIP_RAND()                     (random_uint32())
+#endif
 
 #ifdef __cplusplus
 }

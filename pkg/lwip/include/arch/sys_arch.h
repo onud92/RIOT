@@ -28,7 +28,6 @@
 #include "sched.h"
 #include "mbox.h"
 #include "mutex.h"
-#include "random.h"
 #include "sema.h"
 
 #ifdef __cplusplus
@@ -125,13 +124,6 @@ void sys_lock_tcpip_core(void);
 void sys_unlock_tcpip_core(void);
 #define UNLOCK_TCPIP_CORE()        sys_unlock_tcpip_core()
 /** @} */
-
-#ifdef MODULE_RANDOM
-/**
- * @brief   Use `random_uint32()` to generate random numbers, if available
- */
-#define LWIP_RAND()                     (random_uint32())
-#endif
 
 #ifdef __cplusplus
 }
